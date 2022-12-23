@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getCategories, list } from "./apiCore";
 import Card from "./Card";
-import "./css/search.css";
 
 const Search = () => {
     const [data, setData] = useState({
@@ -80,50 +79,38 @@ const Search = () => {
     };
 
     const searchForm = () => (
-        // <form onSubmit={searchSubmit}>
-        //     <span className="input-group-text">
-        //         <div className="input-group input-group-lg">
-        //             <div className="input-group-prepend">
-        //                 <select
-        //                     className="btn mr-2"
-        //                     onChange={handleChange("category")}
-        //                 >
-        //                     <option value="All">All</option>
-        //                     {categories.map((c, i) => (
-        //                         <option key={i} value={c._id}>
-        //                             {c.name}
-        //                         </option>
-        //                     ))}
-        //                 </select>
-        //             </div>
+        <form onSubmit={searchSubmit}>
+            <span className="input-group-text">
+                <div className="input-group input-group-lg">
+                    <div className="input-group-prepend">
+                        <select
+                            className="btn mr-2"
+                            onChange={handleChange("category")}
+                        >
+                            <option value="All">All</option>
+                            {categories.map((c, i) => (
+                                <option key={i} value={c._id}>
+                                    {c.name}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
 
-        //             <input
-        //                 type="search"
-        //                 className="form-control"
-        //                 onChange={handleChange("search")}
-        //                 placeholder="Search by name"
-        //             />
-        //         </div>
-        //         <div
-        //             className="btn input-group-append"
-        //             style={{ border: "none" }}
-        //         >
-        //             <button className="input-group-text">Search</button>
-        //         </div>
-        //     </span>
-        // </form>
-        <>
-        <div class="main">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search Courses"></input>
-                        <div class="input-group-append">
-                            <button class="btn btn-secondary" type="button">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </div>
+                    <input
+                        type="search"
+                        className="form-control"
+                        onChange={handleChange("search")}
+                        placeholder="Search by name"
+                    />
                 </div>
-        </div>
-        </>
+                <div
+                    className="btn input-group-append"
+                    style={{ border: "none" }}
+                >
+                    <button className="input-group-text">Search</button>
+                </div>
+            </span>
+        </form>
     );
 
     return (

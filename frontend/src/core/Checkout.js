@@ -92,7 +92,7 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
                             amount: response.transaction.amount,
                             address: deliveryAddress
                         };
-
+   
                         createOrder(userId, token, createOrderData)
                             .then(response => {
                                 emptyCart(() => {

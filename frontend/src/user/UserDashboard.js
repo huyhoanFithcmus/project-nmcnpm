@@ -4,44 +4,31 @@ import { isAuthenticated } from "../auth";
 import { Link } from "react-router-dom";
 import { getPurchaseHistory } from "./apiUser";
 import moment from "moment";
-import "../user/css/userDB.css"
 
 const Dashboard = () => {
     const [history, setHistory] = useState([]);
-
     const {
         user: { _id, name, email, role }
     } = isAuthenticated();
-    const token = isAuthenticated().token;
-
-    const init = (userId, token) => {
-        getPurchaseHistory(userId, token).then(data => {
-            if (data.error) {
-                console.log(data.error);
-            } else {
-                setHistory(data);
-            }
-        });
-    };
-
-    const profile_pic = () => {
-        // if user don't have profile picture, use default profile picture
-        return (
-            <div className="profile-picture">
-                <img src="https://i.imgur.com/0y0XQ9X.png" alt="profile" />
-            </div>
-        );
-    };
-
-
+   
+    const token = isAuthenticated().token
     useEffect(() => {
+        const init = (userId, token) => {
+            getPurchaseHistory(userId, token).then(data => {
+                if (data.error) {
+                    console.log(data.error);
+                } else {
+                    setHistory(data);
+                }
+            });
+        };
         init(_id, token);
-    }, []);
+        }, 
+    [_id,token]);
 
     const userLinks = () => {
         return (
             <div className="card">
-                <profile_pic></profile_pic>
                 <h4 className="card-header">User Links</h4>
                 <ul className="list-group">
                     <li className="list-group-item">
@@ -64,17 +51,17 @@ const Dashboard = () => {
             <div className="card mb-5">
                 <h3 className="card-header">User Information</h3>
                 <ul className="list-group">
-                    <li className="list-group-item">Name: {name}</li>
-                    <li className="list-group-item">Email: {email}</li>
+                    <li className="list-group-item">{name}</li>
+                    <li className="list-group-item">{email}</li>
                     <li className="list-group-item">
-                        Role: {role === 1 ? "Admin" : "Registered User"}
+                        {role === 1 ? "Admin" : "Registered User"}
                     </li>
                 </ul>
             </div>
         );
     };
 
-    const purchaseHistory = history => {
+    const purchaseHistory = (history) => {
         return (
             <div className="card mb-5">
                 <h3 className="card-header">Purchase history</h3>
