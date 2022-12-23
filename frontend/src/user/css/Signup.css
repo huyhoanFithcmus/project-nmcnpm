@@ -1,0 +1,87 @@
+h2 {
+    font-weight: 100;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+    text-align: center;
+}
+
+h4 {
+    font-size: 15px;
+    font-weight: 100;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+}
+
+form                 {
+    margin-right: 90px;
+    margin-left: 80px
+}
+
+
+.form-group input {
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 25px;
+    width: 30%;
+    /*put to center*/
+    margin: 0 auto;
+}
+
+.text-muted {
+    /* put to the center */
+    text-align: center;
+    margin: 10 auto;
+}
+
+.image {
+    margin-left: 110px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+form {
+    /* float to top */
+    margin-top: 10px;
+
+}
+
+.form-group a {
+    /* put to the center */
+    text-align: center;
+}
+
+button.btn.btn-primary {
+    /* put to the center */
+    margin: 0 auto;
+    display: block;
+    width: 25%;
+    border-radius: 25px;
+    margin-left: 515px;
+}
+
+@media (min-width: 576px)
+{
+    /* padding for small devices */
+    .form-group {
+        margin-left: 250px;
+    }
+
+    .form-group input {
+        width: 40%;
+    }
+
+    .form-group label {
+        margin-left: -100px;
+    }
+
+    .form-group a {
+        margin-top: 100px;
+        padding-top: 10px;
+        margin-left: 340px;
+    }
+
+    img {
+        margin-top: -300px;
+        margin-left: 120px;
+    }
+}

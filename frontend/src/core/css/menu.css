@@ -1,0 +1,6 @@
+.bg-dark {
+    --bs-bg-opacity: 1;
+    background-color: black!important;
+}
+
+

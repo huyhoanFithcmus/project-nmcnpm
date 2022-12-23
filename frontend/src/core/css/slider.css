@@ -1,0 +1,36 @@
+.slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.slider__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    border: none;
+    background: transparent;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.slider__button:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.slider__button--prev {
+    left: 20px;
+}
+
+.slider__button--next {
+    right: 20px;
+}

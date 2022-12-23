@@ -1,0 +1,21 @@
+.best-seller-banner {
+    background: url(https://images.ctfassets.net/hrltx12pl8hq/4ACnMj4WVSOZRZt0jHu9h5/1506f652bcd70f4dc3e88219fefea858/shutterstock_739595833-min.jpg?fit=fill&w=1920&h=400);
+    background-color: #f1f8e9;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.best-seller-label {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.best-seller-banner-content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+}

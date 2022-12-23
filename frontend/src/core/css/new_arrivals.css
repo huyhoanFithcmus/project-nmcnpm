@@ -1,0 +1,88 @@
+/* css */
+.new_arrivals {
+    padding: 0 0 50px 0;
+    margin: 20px;
+}
+
+.new_arrivals .container {
+    padding: 0 15px;
+}
+
+.new_arrivals .row {
+    margin: 0 -15px;
+}
+
+.new_arrivals .col-lg-3 {
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.new_arrivals .card {
+    background-color: rgb(216, 144, 144);
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.new_arrivals .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.new_arrivals .card-p {
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.new_arrivals .card-btn-1 {
+    width: 100%;
+}
+
+.new_arrivals .card-image {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.new_arrivals button.btn-outline-primary {
+    color: #007bff;
+    /* text color */
+    background-color: transparent;
+    /* remove background color */
+    border-color: #007bff;
+    /* border color */
+    font-size: 1rem;
+    /* font size */
+    font-weight: 500;
+    /* font weight */
+    padding: 0.5rem 1rem;
+    /* button padding */
+    border-radius: 0.25rem;
+    /* border radius */
+    cursor: pointer;
+    /* pointer cursor on hover */
+    transition: all 0.2s;
+    /* smooth hover transition */
+}
+
+.new_arrivals button.btn-outline-primary:hover {
+    color: #fff;
+    /* text color on hover */
+    background-color: #007bff;
+    /* background color on hover */
+    border-color: #007bff;
+    /* border color on hover */
+}
+
+/* 
+ */
+/* .new_arrivals {
+ */
+
+ 

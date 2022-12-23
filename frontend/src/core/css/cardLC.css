@@ -1,0 +1,13 @@
+/* css for card_LC */
+.card-1 {
+    width: 700px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    /* border */
+    border: 1px solid #651818;
+    border-radius: 10px;
+    /* padding */
+    padding: 10px;
+    /* shadow */
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}

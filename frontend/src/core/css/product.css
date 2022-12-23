@@ -1,0 +1,31 @@
+.course-banner {
+    background: url(https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero.jpg) no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    padding: 100px 0;
+    position: relative;
+}
+
+.course-intro__title {
+    margin-left: -495px;
+}
+
+.course-intro__content {
+    color: aliceblue;
+    margin-top: -300px;
+    margin-left: 300px;
+}
+
+.course-intro__info {
+    margin-top: 20px;
+}
+
+/* css for Card */
+.card-2 {
+    margin-top: -350px;
+}
+
+.course-content {
+    margin-top: 40px;
+    margin-left: 300px;
+}
