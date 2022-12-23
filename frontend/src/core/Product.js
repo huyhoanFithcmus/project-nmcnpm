@@ -4,6 +4,7 @@ import { read, listRelated } from './apiCore';
 import Card from './Card';
 import '../core/css/product.css'
 import Footer from './Footer';
+import Card_LC from './Card_landscape';
 
 const Product = props => {
     const [product, setProduct] = useState({});
@@ -138,7 +139,7 @@ const Product = props => {
                                     {/* card related with course name */}
                                     {relatedProduct.map((p, i) => (
                                         <div className="mb-3" key={i}>
-                                            <Card product={p} />
+                                            <Card_LC product={p} />
                                         </div>
                                     ))}
                                 </div>
