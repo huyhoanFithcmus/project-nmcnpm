@@ -1,11 +1,12 @@
 /* css */
-.new_arrivals {
+.new-arrivals {
     padding: 0 0 50px 0;
-    margin: 20px;
+    margin: 50px;
 }
 
 .new_arrivals .container {
     padding: 0 15px;
+
 }
 
 .new_arrivals .row {
@@ -80,6 +81,9 @@
     /* border color on hover */
 }
 
+.new-arrivals-image {
+    margin-left: 50px;
+}
 /* 
  */
 /* .new_arrivals {

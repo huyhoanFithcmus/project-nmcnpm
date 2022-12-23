@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Layout from '../core/Layout';
 import { signup } from '../auth';
 import "./css/Signup.css"
+import "../core/Footer"
+import Footer from '../core/Footer';
 
 const Signup = () => {
     const [values, setValues] = useState({
@@ -45,25 +47,65 @@ const Signup = () => {
     );
 
     const signUpForm = () => (
-        <form>
-            <div className="form-group">
-                <h4 className="text-muted">Tên đăng nhập</h4>
-                <input onChange={handleChange('name')} type="text" className="form-control" value={name} />
-            </div>
+        <>
 
-            <div className="form-group">
-                <h4 className="text-muted">Email</h4>
-                <input onChange={handleChange('email')} type="email" className="form-control" value={email} />
-            </div>
+            <div class="tab-content">
+                <form>
+                    <div class="text-center mb-3">
+                        <p>Sign up with:</p>
+                        <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
 
-            <div className="form-group">
-                <h4 className="text-muted">Mật khẩu</h4>
-                <input onChange={handleChange('password')} type="password" className="form-control" value={password} />
-            </div>
-            <button onClick={clickSubmit} className="btn btn-primary">
+                        <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-google"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-github"></i>
+                        </button>
+                    </div>
+
+                    <p class="text-center">or:</p>
+
+
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="registerName">Name</label>
+                        <input onChange={handleChange('name')} type="text" className="form-control" value={name} />
+                        
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="registerEmail">Email</label>
+                        <input onChange={handleChange('email')} type="email" className="form-control" value={email} />
+                        
+                    </div>
+
+
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="registerPassword">Password</label>
+                        <input onChange={handleChange('password')} type="password" className="form-control" value={password} />
+
+                    </div>
+
+
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="registerRepeatPassword">Repeat password</label>
+                        <input type="password" id="registerRepeatPassword" class="form-control" />
+                    </div>
+
+
+                    <button onClick={clickSubmit} className="btn btn-primary">
                 Tạo tài khoản mới
             </button>
-        </form>
+                </form>
+            </div>
+
+        </>
     );
 
     const showError = () => (
@@ -80,14 +122,11 @@ const Signup = () => {
 
     return (
         <Layout
-            title="Đăng ký"
-            description=""
             className="container col-md-8 offset-md-2"
         >
             {showSuccess()}
             {showError()}
             {signUpForm()}
-            {imgSignUp()}
         </Layout>
     );
 };

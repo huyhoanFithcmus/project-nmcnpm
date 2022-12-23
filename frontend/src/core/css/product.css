@@ -7,13 +7,17 @@
 }
 
 .course-intro__title {
-    margin-left: -495px;
+    margin-left: -470px;
 }
 
 .course-intro__content {
-    color: aliceblue;
-    margin-top: -300px;
+    background-color: aliceblue;
+    color: rgb(0, 0, 0);
+    margin-top: -355px;
     margin-left: 300px;
+    border: 1px solid #651818;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .course-intro__info {
@@ -28,4 +32,20 @@
 .course-content {
     margin-top: 40px;
     margin-left: 300px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.course-content__footer {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 300px;
+}
+
+.course-content__item {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
 }

@@ -56,14 +56,14 @@ button.btn.btn-primary {
     display: block;
     width: 25%;
     border-radius: 25px;
-    margin-left: 515px;
+    text-align: center;
 }
 
 @media (min-width: 576px)
 {
     /* padding for small devices */
     .form-group {
-        margin-left: 250px;
+        margin-left: 0px;
     }
 
     .form-group input {
@@ -77,11 +77,12 @@ button.btn.btn-primary {
     .form-group a {
         margin-top: 100px;
         padding-top: 10px;
-        margin-left: 340px;
+        text-align: center;
     }
 
     img {
-        margin-top: -300px;
-        margin-left: 120px;
+        margin-top: -4px;
+        margin-left: 1px;
     }
+
 }

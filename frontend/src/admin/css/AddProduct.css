@@ -1,0 +1,16 @@
+.form-group input {
+    width: 40%;
+    margin-left: -0px;
+    border-radius: 0%;
+}
+
+textarea.form-control {
+    min-height: calc(1.5em + 0.75rem + 2px);
+    border-color: black
+}
+
+select.form-control {
+    width: 40%;
+    margin-left: -0px;
+    border-color: black
+}

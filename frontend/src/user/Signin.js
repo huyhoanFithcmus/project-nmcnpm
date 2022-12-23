@@ -6,7 +6,7 @@ import "./css/Signin.css"
 
 const Signin = () => {
     const [values, setValues] = useState({
-        email: " ",
+        email: "",
         password: "",
         error: "",
         loading: false,
@@ -63,43 +63,127 @@ const Signin = () => {
 
     const signUpForm = () => (
 
-        <form>
+        // <form>
 
-            <div className="form-group">
-                <h4 className="text-muted">Email</h4>
-                <input
+        //     <div className="form-group">
+        //         <h4 className="text-muted">Email</h4>
+                // <input
+                //     onChange={handleChange("email")}
+                //     type="email"
+                //     className="form-control"
+                //     value={email}
+                // />
+        //     </div>
+
+        //     <div className="form-group">
+        //         <h4 className="text-muted">Mật Khẩu</h4>
+                // <input
+                //     onChange={handleChange("password")}
+                //     type="password"
+                //     className="form-control"
+                //     value={password}
+                // />
+        //     </div>
+
+        //     <button onClick={clickSubmit} className="btn btn-primary">
+        //         Đăng nhập
+        //     </button>
+
+        //     <div className="form-group">
+        //         <a href="/auth/password/forgot" className="forgot-pass">
+        //             Quên mật khẩu?
+        //         </a>
+        //     </div>
+
+            // <button onClick={clickSignUp} className="btn btn-primary">
+            //     Tạo tài khoản mới
+            // </button>
+
+        // </form>
+
+        // sign in form using html and bootstrap 5
+        <>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+                    <form>
+                        <div class="text-center mb-3">
+                            <p>Sign in with:</p>
+                            <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-facebook"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-google"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-github"></i>
+                            </button>
+                        </div>
+
+                        <p class="text-center">or:</p>
+
+
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="loginName">Email or username</label>
+                            <input
                     onChange={handleChange("email")}
                     type="email"
                     className="form-control"
                     value={email}
+                    placeholder="email or username"
                 />
-            </div>
+                        </div>
 
-            <div className="form-group">
-                <h4 className="text-muted">Mật Khẩu</h4>
-                <input
+
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="loginPassword">Password</label>
+                            <input
                     onChange={handleChange("password")}
                     type="password"
                     className="form-control"
                     value={password}
+                    placeholder="password"
                 />
-            </div>
 
-            <button onClick={clickSubmit} className="btn btn-primary">
-                Đăng nhập
+                        </div>
+
+
+                        <div class="row mb-4">
+                            <div class="col-md-6 d-flex justify-content-center">
+
+                                <div class="form-check mb-3 mb-md-0">
+                                    <input class="form-check-input" type="checkbox" value="" id="loginCheck"/>
+                                    <label class="form-check-label" for="loginCheck"> Remember me </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 d-flex justify-content-center">
+
+                                <a href="#!">Forgot password?</a>
+                            </div>
+                        </div>
+
+
+                        <button onClick={clickSignUp} className="btn btn-primary btn-btn-md4">
+                    Sign in
             </button>
 
-            <div className="form-group">
-                <a href="/auth/password/forgot" className="forgot-pass">
-                    Quên mật khẩu?
-                </a>
+
+                        <div class="text-center">
+                            {/* link to signup.js */}
+                            <p>Not a member? <a href="/signup">Register</a></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+                </div>
             </div>
-
-            <button onClick={clickSignUp} className="btn btn-primary">
-                Tạo tài khoản mới
-            </button>
-
-        </form>
+        </>
     );
 
     const showError = () => (
@@ -133,17 +217,16 @@ const Signin = () => {
     };
 
     return (
+
         <Layout
-            title="Đăng nhập"
-            description=""
             className="container col-md-8 offset-md-2"
         >
+            {showLoading()}
             {showError()}
             {signUpForm()}
-            {imgSignin()}
-            {showLoading()}
             {redirectUser()}
         </Layout>
+
     );
 };
 

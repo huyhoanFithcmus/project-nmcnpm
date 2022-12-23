@@ -4,6 +4,7 @@ import Layout from './Layout';
 import { getCart } from './cartHelpers';
 import Card from './Card';
 import Checkout from './Checkout';
+import Card_LC from './Card_landscape';
 
 const Cart = () => {
     const [items, setItems] = useState([]);
@@ -15,11 +16,11 @@ const Cart = () => {
 
     const showItems = items => {
         return (
-            <div>
+            <div class="col-md-6">
                 <h2>Your cart has {`${items.length}`} items</h2>
                 <hr />
                 {items.map((product, i) => (
-                    <Card
+                    <Card_LC
                         key={i}
                         product={product}
                         showAddToCartButton={false}
@@ -47,7 +48,7 @@ const Cart = () => {
         >
             <div className="row">
                 <div className="col-6">{items.length > 0 ? showItems(items) : noItemsMessage()}</div>
-
+                
                 <div className="col-6">
                     <h2 className="mb-4">Your cart summary</h2>
                     <hr />
