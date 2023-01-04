@@ -3,13 +3,20 @@
 ### Development Team 09: 
 #### Members:
 
-| No. | Names           | Students' Email               | Student ID|
+| No. | Members' Names           | Students' Email               | Student ID|
 |-----|-----------------|-------------------------------|-----------|
 |  1  | Nguyễn Huy Hoàn | 20127166@student.hcmus.edu.vn | 20127166  |
 |  2  | Bùi Thanh Lâm   | 20127402@student.hcmus.edu.vn | 20127402  |
 |  3  | Võ Thanh Lâm    | 20127546@student.hcmus.edu.vn | 20127546  |
 |  4  | Nguyễn Hoài Mẫn | 20127561@student.hcmus.edu.vn | 20127561  |
 |  5  | Phan Trí Nguyên | 20127578@student.hcmus.edu.vn | 20127578  |
+
+#### Project information:
+
+| Project Name    | Programming Environment                                    |
+|-----------------|------------------------------------------------------------|
+| Sell Courses Web| Programming Softwares: Visual Studio Code, Postman, MongoDB|
+
 
 ### Backend Team: 
 1. Bùi Thanh Lâm
