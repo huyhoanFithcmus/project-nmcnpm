@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
 const { ObjectId } = mongoose.Schema;
-
+// database of product (courses)
 const productSchema = new mongoose.Schema(
     {
         name: {
+
             type: String,
             trim: true,
             required: true,
