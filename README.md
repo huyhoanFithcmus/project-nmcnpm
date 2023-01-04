@@ -1,37 +1,76 @@
-# INTRODUCTION SOFTWARE ENGINEERING - PROJECT
+# INTRODUCTION SOFTWARE ENGINEERING - PROJECT - CLASS 20CLC04
+# 1. Overview
 ### Development Team 09: 
 #### Members:
 
-| STT | Họ và tên       | Email SV                      | MSSV     |
-|-----|-----------------|-------------------------------|----------|
-|  1  | Nguyễn Huy Hoàn | 20127166@student.hcmus.edu.vn | 20127166 |
-|  2  | Bùi Thanh Lâm   | 20127402@student.hcmus.edu.vn | 20127402 |
-|  3  | Võ Thanh Lâm    | 20127546@student.hcmus.edu.vn | 20127546 |
-|  4  | Nguyễn Hoài Mẫn | 20127561@student.hcmus.edu.vn | 20127561 |
-|  5  | Phan Trí Nguyên | 20127578@student.hcmus.edu.vn | 20127578 |
+| No. | Names           | Students' Email               | Student ID|
+|-----|-----------------|-------------------------------|-----------|
+|  1  | Nguyễn Huy Hoàn | 20127166@student.hcmus.edu.vn | 20127166  |
+|  2  | Bùi Thanh Lâm   | 20127402@student.hcmus.edu.vn | 20127402  |
+|  3  | Võ Thanh Lâm    | 20127546@student.hcmus.edu.vn | 20127546  |
+|  4  | Nguyễn Hoài Mẫn | 20127561@student.hcmus.edu.vn | 20127561  |
+|  5  | Phan Trí Nguyên | 20127578@student.hcmus.edu.vn | 20127578  |
 
-#### Backend Team: 
+### Backend Team: 
 1. Bùi Thanh Lâm
 2. Võ Thanh Lâm
 3. Nguyễn Hoài Mẫn
 
-#### Frontend Team: 
+### Frontend Team: 
 1. Nguyễn Huy Hoàn
 2. Phan Trí Nguyên
 
-# BASIC CONCEPT
+# 2. BASIC CONCEPT
 - With the growth of the network and the website in recent years, the center is now one of the good options for the learning environment after secondary education in addition to universities. 
 - In order for the center to be accessible to students in need, the website is one of the most accessible methods. The team will create a website in order to better suit the demands of promoting the facility
 
 
-# Target user:
+# 3. Target user:
 - We will focus on **2 targets** on my team's website with their own different features:
-|-------|
-| Users |
-| Admin |
 
+| Target| Description |
+|-------|-------------|
+| User | A general user will have limited access to the account as per the permissions given by the Admin |
+| Admin | Administrators have the highest level of access to an account. If you want to be one for an account, you can reach out to the Admin of the account |
 
-## BUILD PROJECT
+#  4. Features:
+### *a. User*:
+
+|Features Description|
+|--------------------|
+|Log in/ Log out|
+|Search for the name, lecturer of that course to get the review|
+|Read/Write comments to review the course|
+|Recommend on the homepage which course has many reviews or good ratings|
+|Rating and commenting on the course and lecturer|
+|Recommend new or next course|
+|When they search for courses, it will show the course’s details on the first line and the other one is the review blogs|
+|Users can browse the course description and watch the introductory videos|
+|Users will have a trust point, which they gain from reviewing the course|
+|Purchase and pay for one or more courses at once|
+
+### *a. Admin*:
+
+|Features Description|
+|--------------------|
+|Manage users/lecturers|
+|Add/Delete courses|
+|Manage all the review content|
+
+#  5. CODING ENVIRONMENT AND CODING LANGUAGE:
+
+|Front-end |Back-end |Database|
+|----------|---------|--------|
+|HTML      |NodeJS   |MongoDB |
+|CSS       |ExpressJS|
+|JavaScript|
+|ReactJS   |
+
+#  6. COMMUNICATION TOOLS
+
+|Messenger|Github |Jira|Google Docs|
+
+# 7. BUILD PROJECT
 ```
 npm install -i
 ```
