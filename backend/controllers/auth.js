@@ -5,17 +5,15 @@ const { errorHandler } = require('../helpers/dbErrorHandler');
 
 // using promise
 exports.signup = (req, res) => {
-    // console.log("req.body", req.body);
     const user = new User(req.body);
     user.save((err, user) => {
         if (err) {
             return res.status(400).json({
-                // error: errorHandler(err)
                 error: 'Email is taken'
             });
         }
         user.salt = undefined;
-        user.hashed_password = undefined;
+        user.hashed_password = undefined;       //hashed password
         res.json({
             user
         });
