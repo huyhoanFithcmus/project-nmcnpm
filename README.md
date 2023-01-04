@@ -1,7 +1,7 @@
 # INTRODUCTION SOFTWARE ENGINEERING - PROJECT - CLASS 20CLC04
 # 1. Overview
-### Development Team 09: 
-#### Members:
+### 1.1 Development Team 09: 
+#### a) Team Information:
 
 | No. | Members' Names           | Students' Email               | Student ID|
 |-----|-----------------|-------------------------------|-----------|
@@ -11,19 +11,19 @@
 |  4  | Nguyễn Hoài Mẫn | 20127561@student.hcmus.edu.vn | 20127561  |
 |  5  | Phan Trí Nguyên | 20127578@student.hcmus.edu.vn | 20127578  |
 
-#### Project information:
+#### b) Project Information:
 
 | Project Name    | Programming Environment                                    |
 |-----------------|------------------------------------------------------------|
 | Sell Courses Web| Programming Softwares: Visual Studio Code, Postman, MongoDB|
 
-
-### Backend Team: 
+### 1.2 Members' Roles: 
+#### a) Backend Team: 
 1. Bùi Thanh Lâm
 2. Võ Thanh Lâm
 3. Nguyễn Hoài Mẫn
 
-### Frontend Team: 
+#### b) Frontend Team: 
 1. Nguyễn Huy Hoàn
 2. Phan Trí Nguyên
 
@@ -41,7 +41,7 @@
 | Admin | Administrators have the highest level of access to an account. If you want to be one for an account, you can reach out to the Admin of the account |
 
 #  4. Features:
-### *a. User*:
+### *4.1. User*:
 
 |Features Description|
 |--------------------|
@@ -56,7 +56,7 @@
 |Users will have a trust point, which they gain from reviewing the course|
 |Purchase and pay for one or more courses at once|
 
-### *a. Admin*:
+### *4.2. Admin*:
 
 |Features Description|
 |--------------------|
