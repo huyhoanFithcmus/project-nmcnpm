@@ -75,6 +75,8 @@
 
 #  6. COMMUNICATION TOOLS
 
+|COMMUNICATION TOOLS               |
+|----------------------------------|
 |Messenger|Github |Jira|Google Docs|
 
 # 7. BUILD PROJECT
