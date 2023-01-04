@@ -1,5 +1,6 @@
 import { API } from '../config';
 
+// tạo mục Filter by categories cho người dùng lọc
 export const createCategory = (userId, token, category) => {
     return fetch(`${API}/category/create/${userId}`, {
         method: 'POST',
@@ -18,6 +19,7 @@ export const createCategory = (userId, token, category) => {
         });
 };
 
+// cập nhật mục Filter by categories khi người dùng lọc khóa học
 export const updateCategory = (categoryId, userId, token, category) => {
     return fetch(`${API}/category/${categoryId}/${userId}`, {
         method: 'PUT',
@@ -35,6 +37,7 @@ export const updateCategory = (categoryId, userId, token, category) => {
         .catch(err => console.log(err));
 };
 
+//tạo khóa học và xác thực một khóa học (ko bị trùng lặp)
 export const createProduct = (userId, token, product) => {
     return fetch(`${API}/product/create/${userId}`, {
         method: 'POST',
@@ -52,6 +55,7 @@ export const createProduct = (userId, token, product) => {
         });
 };
 
+//
 export const getCategory = categoryId => {
     return fetch(`${API}/category/${categoryId}`, {
         method: 'GET'
@@ -62,6 +66,7 @@ export const getCategory = categoryId => {
         .catch(err => console.log(err));
 };
 
+//tương ứng vs nhiều categories
 export const getCategories = () => {
     return fetch(`${API}/categories`, {
         method: 'GET'
@@ -72,6 +77,7 @@ export const getCategories = () => {
         .catch(err => console.log(err));
 };
 
+// show ra danh sách các sản phẩm khóa học trên trang web
 export const listOrders = (userId, token) => {
     return fetch(`${API}/order/list/${userId}`, {
         method: 'GET',
@@ -100,6 +106,7 @@ export const getStatusValues = (userId, token) => {
         .catch(err => console.log(err));
 };
 
+//khi người dùng hoàn thành thao tác thêm một khóa học vào giỏ hàng
 export const updateOrderStatus = (userId, token, orderId, status) => {
     return fetch(`${API}/order/${orderId}/status/${userId}`, {
         method: 'PUT',
