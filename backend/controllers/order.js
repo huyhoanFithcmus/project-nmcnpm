@@ -28,7 +28,6 @@ exports.create = (req, res) => {
                 error: errorHandler(error)
             });
         }
-        // User.find({ categories: { $in: categories } }).exec((err, users) => {}
         console.log('ORDER IS JUST SAVED >>> ', order);
         // send email alert to admin
         // order.address
