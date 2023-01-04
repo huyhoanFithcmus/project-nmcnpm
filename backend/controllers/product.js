@@ -4,7 +4,8 @@ const fs = require('fs');
 const Product = require('../models/product');
 const { errorHandler } = require('../helpers/dbErrorHandler');
 
-exports.productById = (req, res, next, id) => {
+exports.productById = (req, res, next, id) =>
+{
     Product.findById(id)
         .populate('category')
         .exec((err, product) => {
@@ -22,7 +23,7 @@ exports.read = (req, res) => {
     req.product.photo = undefined;
     return res.json(req.product);
 };
-
+// create products
 exports.create = (req, res) => {
     let form = new formidable.IncomingForm();
     form.keepExtensions = true;
@@ -69,6 +70,7 @@ exports.create = (req, res) => {
     });
 };
 
+// remove product 
 exports.remove = (req, res) => {
     let product = req.product;
     product.remove((err, deletedProduct) => {
