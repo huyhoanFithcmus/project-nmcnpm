@@ -3,9 +3,11 @@
 /**
  * Get unique error field name
  */
-const uniqueMessage = error => {
+const uniqueMessage = error => 
+{
     let output;
-    try {
+    try 
+    {
         let fieldName = error.message.substring(
             error.message.lastIndexOf(".$") + 2,
             error.message.lastIndexOf("_1")
@@ -15,7 +17,7 @@ const uniqueMessage = error => {
             fieldName.slice(1) +
             " already exists";
     } catch (ex) {
-        output = "Unique field already exists";
+        output = "Unique field already exists in the database";
     }
 
     return output;
@@ -27,7 +29,8 @@ const uniqueMessage = error => {
 exports.errorHandler = error => {
     let message = "";
 
-    if (error.code) {
+    if (error.code) 
+    {
         switch (error.code) {
             case 11000:
             case 11001:
@@ -36,7 +39,8 @@ exports.errorHandler = error => {
             default:
                 message = "Something went wrong";
         }
-    } else {
+    } else 
+    {
         for (let errorName in error.errorors) {
             if (error.errorors[errorName].message)
                 message = error.errorors[errorName].message;
