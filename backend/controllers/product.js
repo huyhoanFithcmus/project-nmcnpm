@@ -199,9 +199,6 @@ exports.listBySearch = (req, res) => {
     let skip = parseInt(req.body.skip);
     let findArgs = {};
 
-    // console.log(order, sortBy, limit, skip, req.body.filters);
-    // console.log("findArgs", findArgs);
-
     for (let key in req.body.filters) {
         if (req.body.filters[key].length > 0) {
             if (key === 'price') {
