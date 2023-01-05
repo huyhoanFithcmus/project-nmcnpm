@@ -20,7 +20,8 @@ exports.signup = (req, res) => {
     });
 };
 
-exports.signin = (req, res) => {
+exports.signin = (req, res) => 
+{
     // find the user based on email
     const { email, password } = req.body;
     User.findOne({ email }, (err, user) => {
@@ -48,7 +49,7 @@ exports.signin = (req, res) => {
 
 exports.signout = (req, res) => {
     res.clearCookie('t');
-    res.json({ message: 'Signout success' });
+    res.json({ message: 'Sign out success' });
 };
 
 exports.requireSignin = expressJwt({
@@ -75,7 +76,4 @@ exports.isAdmin = (req, res, next) => {
     next();
 };
 
-/**
- * google login full
- * https://www.udemy.com/instructor/communication/qa/7520556/detail/
- */
+
