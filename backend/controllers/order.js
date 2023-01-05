@@ -1,6 +1,5 @@
 const { Order, CartItem } = require('../models/order');
 const { errorHandler } = require('../helpers/dbErrorHandler');
-// sendgrid for email npm i @sendgrid/mail
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey('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');
 
