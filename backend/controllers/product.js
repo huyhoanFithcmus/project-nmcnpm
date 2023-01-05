@@ -5,7 +5,7 @@ const Product = require('../models/product');
 const { errorHandler } = require('../helpers/dbErrorHandler');
 
 
-//product checking
+//product call API
 exports.productById = (req, res, next, id) =>
 {
     Product.findById(id)
