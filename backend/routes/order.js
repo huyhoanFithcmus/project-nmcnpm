@@ -10,8 +10,10 @@ const {
     orderById,
     updateOrderStatus
 } = require("../controllers/order");
+
 const { decreaseQuantity } = require("../controllers/product");
 
+//call API
 router.post(
     "/order/create/:userId",
     requireSignin,
@@ -29,6 +31,7 @@ router.get(
     isAdmin,
     getStatusValues
 );
+
 router.put(
     "/order/:orderId/status/:userId",
     requireSignin,
