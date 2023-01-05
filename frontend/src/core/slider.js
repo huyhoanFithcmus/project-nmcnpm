@@ -4,9 +4,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [
-    { src: 'https://img.freepik.com/premium-photo/global-business-network-businessman-touching-global-network-data-exchanges-big-data_34200-433.jpg?w=1060', alt: 'Image 1', caption: 'Sell courses' },
-    { src: 'https://img.freepik.com/premium-photo/wireless-network-connection-city_64030-302.jpg?w=1060', alt: 'Image 2', caption: 'Sell courses' },
-    { src: 'https://img.freepik.com/premium-photo/businessman-using-mobile-smartphone-global-network-connection-investor-customer_34200-485.jpg?w=1060', alt: 'Image 3', caption: 'Sell courses' }
+    { src: 'https://scontent.fsgn4-1.fna.fbcdn.net/v/t1.15752-9/321241664_873663967280697_2438481041236380740_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_ohc=IR9FCifE91UAX_ZtoMW&_nc_ht=scontent.fsgn4-1.fna&oh=03_AdQwAEcAtF4T9KE5F2Rn6XzGwE4pC6Xryqq7HG5OuTDclA&oe=63DE29BD', alt: 'Image 1', caption: 'Sell courses' },
+    { src: 'https://scontent.fsgn4-1.fna.fbcdn.net/v/t1.15752-9/321241664_873663967280697_2438481041236380740_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_ohc=IR9FCifE91UAX_ZtoMW&_nc_ht=scontent.fsgn4-1.fna&oh=03_AdQwAEcAtF4T9KE5F2Rn6XzGwE4pC6Xryqq7HG5OuTDclA&oe=63DE29BD', alt: 'Image 2', caption: 'Sell courses' },
+    { src: 'https://scontent.fsgn4-1.fna.fbcdn.net/v/t1.15752-9/321241664_873663967280697_2438481041236380740_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_ohc=IR9FCifE91UAX_ZtoMW&_nc_ht=scontent.fsgn4-1.fna&oh=03_AdQwAEcAtF4T9KE5F2Rn6XzGwE4pC6Xryqq7HG5OuTDclA&oe=63DE29BD', alt: 'Image 3', caption: 'Sell courses' }
   ];
 
   useEffect(() => {
