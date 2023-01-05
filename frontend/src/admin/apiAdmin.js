@@ -64,6 +64,13 @@ export const updateCategory = (categoryId, userId, token, category) => {
 };
 
 /* Các thao tác vs một sản phẩm */
+/**
+ * to perform crud on product
+ * get all products
+ * get a single product
+ * update single product
+ * delete single product
+ */
 //tạo khóa học và xác thực một khóa học (ko bị trùng lặp)
 export const createProduct = (userId, token, product) => {
     return fetch(`${API}/product/create/${userId}`, {
@@ -84,10 +91,62 @@ export const createProduct = (userId, token, product) => {
         });
 };
 
+export const getProducts = () => {
+    return fetch(`${API}/products?limit=undefined`, {
+        method: 'GET'
+    })
+        .then(response => {
+            return response.json();
+        })
+        .catch(err => console.log(err));
+};
 
+export const getProduct = productId => {
+    return fetch(`${API}/product/${productId}`, {
+        method: 'GET'
+    })
+        .then(response => {
+            return response.json();
+        })
+        .catch(err => console.log(err));
+};
 
+//cập nhật thông tin của khóa học
+// các thông tin cần xác thực: ID của khóa học, ID của người dùng (là admin hay user)
+// token và sản phẩm có tồn tại trong danh sách khóa học ko
+export const updateProduct = (productId, userId, token, product) => {
+    return fetch(`${API}/product/${productId}/${userId}`, {
+        method: 'PUT',
+        headers: {
+            Accept: 'application/json',
+            Authorization: `Bearer ${token}`
+        },
+        body: product
+    })
+        .then(response => {
+            return response.json();
+        })
+        .catch(err => console.log(err));
+};
 
+// xóa một sản phẩm (khóa học) ra khỏi danh sách bán hàng trên trang web
+// cần xác thực đc ID của khóa học, ID của người dùng (là admin hay user)
+export const deleteProduct = (productId, userId, token) => {
+    return fetch(`${API}/product/${productId}/${userId}`, {
+        method: 'DELETE',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`
+        }
+    })
+        .then(response => {
+            return response.json();
+        })
+        .catch(err => console.log(err));
+};
 
+/* Các thao tác với một danh sách các  */
 // show ra danh sách các sản phẩm khóa học trên trang web
 export const listOrders = (userId, token) => {
     return fetch(`${API}/order/list/${userId}`, {
@@ -127,69 +186,6 @@ export const updateOrderStatus = (userId, token, orderId, status) => {
             Authorization: `Bearer ${token}`
         },
         body: JSON.stringify({ status, orderId })
-    })
-        .then(response => {
-            return response.json();
-        })
-        .catch(err => console.log(err));
-};
-
-/**
- * to perform crud on product
- * get all products
- * get a single product
- * update single product
- * delete single product
- */
-
-export const getProducts = () => {
-    return fetch(`${API}/products?limit=undefined`, {
-        method: 'GET'
-    })
-        .then(response => {
-            return response.json();
-        })
-        .catch(err => console.log(err));
-};
-
-// xóa một sản phẩm (khóa học) ra khỏi danh sách bán hàng trên trang web
-// cần xác thực đc ID của khóa học, ID của người dùng (là admin hay user)
-export const deleteProduct = (productId, userId, token) => {
-    return fetch(`${API}/product/${productId}/${userId}`, {
-        method: 'DELETE',
-        headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${token}`
-        }
-    })
-        .then(response => {
-            return response.json();
-        })
-        .catch(err => console.log(err));
-};
-
-export const getProduct = productId => {
-    return fetch(`${API}/product/${productId}`, {
-        method: 'GET'
-    })
-        .then(response => {
-            return response.json();
-        })
-        .catch(err => console.log(err));
-};
-
-//cập nhật thông tin của khóa học
-// các thông tin cần xác thực: ID của khóa học, ID của người dùng (là admin hay user)
-// token và sản phẩm có tồn tại trong danh sách khóa học ko
-export const updateProduct = (productId, userId, token, product) => {
-    return fetch(`${API}/product/${productId}/${userId}`, {
-        method: 'PUT',
-        headers: {
-            Accept: 'application/json',
-            Authorization: `Bearer ${token}`
-        },
-        body: product
     })
         .then(response => {
             return response.json();
