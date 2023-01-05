@@ -2,6 +2,7 @@ const User = require('../models/user');
 const braintree = require('braintree');
 require('dotenv').config();
 
+// gate payment with paypall or visa
 const gateway = braintree.connect({
     environment: braintree.Environment.Sandbox, // Production
     merchantId: process.env.BRAINTREE_MERCHANT_ID,
@@ -9,7 +10,9 @@ const gateway = braintree.connect({
     privateKey: process.env.BRAINTREE_PRIVATE_KEY
 });
 
-exports.generateToken = (req, res) => {
+//token payment
+exports.generateToken = (req, res) =>
+{
     gateway.clientToken.generate({}, function(err, response) {
         if (err) {
             res.status(500).send(err);
@@ -19,7 +22,8 @@ exports.generateToken = (req, res) => {
     });
 };
 
-exports.processPayment = (req, res) => {
+exports.processPayment = (req, res) =>
+{
     let nonceFromTheClient = req.body.paymentMethodNonce;
     let amountFromTheClient = req.body.amount;
     // charge
