@@ -10,6 +10,7 @@ const CartItemSchema = new mongoose.Schema(
     price: Number,
     count: Number
   },
+  
   { timestamps: true }
 );
 
