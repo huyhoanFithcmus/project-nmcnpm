@@ -6,6 +6,7 @@ const { userById } = require("../controllers/user");
 const { generateToken, processPayment } = require("../controllers/braintree");
 
 router.get("/braintree/getToken/:userId", requireSignin, isAuth, generateToken);
+
 router.post(
     "/braintree/payment/:userId",
     requireSignin,
