@@ -164,7 +164,7 @@ const Signin = () => {
 
                             <div class="col-md-6 d-flex justify-content-center">
 
-                                <a href="#!">Forgot password?</a>
+                                
                             </div>
                         </div>
 
